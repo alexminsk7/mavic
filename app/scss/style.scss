@@ -1,7 +1,7 @@
-@import "vars";
-@import "libs";
-@import "fonts";
-@import "global";
+@import 'vars';
+@import 'libs';
+@import 'fonts';
+@import 'global';
 
 .header {
   position: fixed;
@@ -9,7 +9,7 @@
   right: 0;
   top: 30px;
   z-index: 10;
-  &__inner {
+  .header__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,7 +19,7 @@
     line-height: 17px;
     @extend %ubuntu-medium;
   }
-  &__btn {
+  .header__btn {
     color: #fff;
     background-color: transparent;
     padding: 6px 28px;
@@ -33,7 +33,7 @@
       background: #fff;
     }
   }
-  &__phone {
+  .header__phone {
     font-size: 16px;
     line-height: 18px;
     margin-left: 8px;
@@ -42,18 +42,25 @@
 }
 
 .menu {
-  &__list-item {
+  .menu__btn {
+    display: none;
+  }
+  .menu__list-item {
     display: inline-block;
-    & + .menu__list-item {
+    padding: 0 5px;
+    .menu + .menu__list-item {
       padding-left: 20px;
     }
+  }
+  .menu__list-phone {
+    display: none;
   }
 }
 
 .top {
-  background-image: url("../images/bg.jpg");
+  background-image: url('../images/bg.jpg');
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -69,34 +76,34 @@
     );
     opacity: 0.4;
   }
-  &__wrapper {
+  .top__wrapper {
     display: flex;
     align-items: flex-end;
   }
-  &__inner {
+  .top__inner {
     display: flex;
     flex-direction: column;
     text-align: center;
     padding-bottom: 15px;
   }
-  &__title {
+  .top__title {
     font-size: 96px;
     line-height: 115px;
     margin-bottom: 25px;
     @extend %sf-semibold;
   }
-  &__img {
+  .top__img {
     margin: 0 auto;
   }
-  &__text {
+  .top__text {
     margin: 25px auto 35px;
     max-width: 325px;
   }
-  &__social-item {
+  .top__social-item {
     display: inline-block;
     margin: 0 25px;
   }
-  &__social-link {
+  .top__social-link {
     opacity: 0.5;
     transition: all 0.3s;
     &:hover {
@@ -106,22 +113,22 @@
 }
 
 .products {
-  &__inner {
+  .products__inner {
     display: flex;
     justify-content: space-between;
     padding-left: 50px;
   }
-  &__text {
+  .products__text {
     max-width: 440px;
     p {
       margin-bottom: 30px;
     }
   }
-  &__slider-box {
+  .products__slider-box {
     position: relative;
     padding-top: 110px;
   }
-  &__slider-text {
+  .products__slider-text {
     width: 285px;
     font-size: 24px;
     line-height: 28px;
@@ -132,10 +139,10 @@
     text-align: right;
     @extend %ubuntu-medium;
   }
-  &__slider {
+  .products__slider {
     max-width: 560px;
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       width: 560px;
       height: 276px;
@@ -170,12 +177,15 @@
 }
 
 .benefits {
-  &__items {
+  .benefits__title {
+    padding-top: 100px;
+  }
+  .benefits__items {
     display: flex;
     flex-wrap: wrap;
     padding-left: 25px;
   }
-  &__item {
+  .benefits__item {
     margin-bottom: 100px;
     display: flex;
     align-items: flex-end;
@@ -194,7 +204,7 @@
       position: relative;
       &::after,
       &::before {
-        content: "";
+        content: '';
         position: absolute;
         background-repeat: no-repeat;
         background-position: 0 0;
@@ -211,14 +221,14 @@
     }
     &:nth-child(3) {
       &::before {
-        background-image: url("../images/line-3.svg");
+        background-image: url('../images/line-3.svg');
         width: 254px;
         height: 42px;
         top: 54px;
         right: -64px;
       }
       &::after {
-        background-image: url("../images/line-2.svg");
+        background-image: url('../images/line-2.svg');
         width: 463px;
         height: 62px;
         top: -67px;
@@ -226,17 +236,17 @@
       }
     }
   }
-  &__num {
+  .benefits__num {
     font-size: 36px;
     line-height: 41px;
     margin-right: 10px;
     @extend %ubuntu-medium;
   }
-  &__img {
+  .benefits__img {
     position: relative;
     margin-right: 32px;
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       width: 193px;
       height: 128px;
@@ -246,7 +256,7 @@
       z-index: -1;
     }
   }
-  &__info {
+  .benefits__info {
     width: 300px;
     &-title {
       width: 123px;
@@ -264,69 +274,69 @@
 }
 
 .specification {
-  &__inner {
+  .specification__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-left: 30px;
   }
-  &__item--center {
+  .specification__item--center {
     margin-right: -15px;
     margin-left: -15px;
   }
-  &__box {
+  .specification__box {
     width: 280px;
     position: relative;
     margin-top: 10px;
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       background-repeat: no-repeat;
       background-position: 0 0;
       background-size: contain;
     }
   }
-  &__box-2 {
+  .specification__box-2 {
     margin-top: 140px;
   }
-  &__box-4 {
+  .specification__box-4 {
     margin-top: 160px;
   }
-  &__box-1::before {
-    background-image: url("../images/poiter-1.svg");
+  .specification__box-1::before {
+    background-image: url('../images/poiter-1.svg');
     width: 246px;
     height: 136px;
     top: 15px;
     right: -194px;
   }
-  &__box-2::before {
-    background-image: url("../images/poiter-2.svg");
+  .specification__box-2::before {
+    background-image: url('../images/poiter-2.svg');
     width: 346px;
     height: 81px;
     right: -290px;
     top: -65px;
   }
-  &__box-3::before {
-    background-image: url("../images/poiter-3.svg");
+  .specification__box-3::before {
+    background-image: url('../images/poiter-3.svg');
     width: 250px;
     height: 103px;
     left: -300px;
     top: 16px;
   }
-  &__box-4::before {
-    background-image: url("../images/poiter-4.svg");
+  .specification__box-4::before {
+    background-image: url('../images/poiter-4.svg');
     width: 124px;
     height: 114px;
     left: -156px;
     top: -74px;
   }
-  &__box-title {
+  .specification__box-title {
     font-size: 21px;
     line-height: 28px;
     margin-bottom: 10px;
     @extend %ubuntu-bold;
   }
-  &__box-text {
+  .specification__box-text {
     font-size: 15px;
     font-weight: 300;
     line-height: 18px;
@@ -334,25 +344,25 @@
 }
 
 .questions {
-  &__items {
+  .questions__items {
     max-width: 757px;
     padding-bottom: 15px;
   }
-  &__item {
+  .questions__item {
     max-width: 690px;
     background: rgba(0, 0, 0, 0.3);
     position: relative;
     &:nth-child(3)::before {
-      content: "";
+      content: '';
       position: absolute;
       width: 319px;
       height: 125px;
       top: -33px;
       right: -386px;
-      background-image: url("../images/half-quadro.png");
+      background-image: url('../images/half-quadro.png');
     }
   }
-  &__item-title {
+  .questions__item-title {
     position: relative;
     font-size: 21px;
     line-height: 28px;
@@ -362,7 +372,7 @@
     cursor: pointer;
     @extend %ubuntu-medium;
     &::after {
-      content: url("../images/accordion-arrow.svg");
+      content: url('../images/accordion-arrow.svg');
       position: absolute;
       width: 67px;
       height: 67px;
@@ -374,7 +384,7 @@
       align-items: center;
     }
   }
-  &__item-text {
+  .questions__item-text {
     font-size: 15px;
     line-height: 22px;
     width: 640px;
@@ -382,7 +392,7 @@
     margin: 0 0 4px;
     display: none;
   }
-  &__item.questions__item--active {
+  .questions__item.questions__item--active {
     .questions__item-title::after {
       transform: rotate(180deg);
     }
@@ -393,12 +403,11 @@
 }
 
 .contacts {
-  &__inner {
+  .contacts__inner {
     display: flex;
     padding-left: 25px;
-    outline: 1px solid blue;
   }
-  &__info {
+  .contacts__info {
     width: 240px;
     margin-right: 60px;
     &-box {
@@ -419,28 +428,28 @@
       text-decoration: underline;
     }
   }
-  &__form {
+  .contacts__form {
     width: 570px;
     margin-right: 106px;
   }
-  &__form-title {
+  .contacts__form-title {
     font-size: 21px;
     line-height: 24px;
     @extend %ubuntu-bold;
     margin: 0 0 13px;
   }
-  &__form-text {
+  .contacts__form-text {
     font-size: 15px;
     line-height: 130%;
     margin: 0 0 12px;
   }
-  &__form-line {
+  .contacts__form-line {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
   }
-  &__form-input,
-  &__form-textarea {
+  .contacts__form-input,
+  .contacts__form-textarea {
     background: rgba(0, 0, 0, 0.5);
     border: none;
     padding: 15px;
@@ -452,22 +461,22 @@
       color: rgba(#fff, 0.4);
     }
   }
-  &__form-input {
+  .contacts__form-input {
     width: 49%;
     font-size: 13px;
     line-height: 130%;
     margin-right: 10px;
   }
-  &__form-input--margin {
+  .contacts__form-input--margin {
     margin-right: 0;
   }
-  &__form-textarea {
+  .contacts__form-textarea {
     min-height: 144px;
     width: 100%;
     resize: none;
     margin-bottom: 20px;
   }
-  &__form-button {
+  .contacts__form-button {
     text-transform: uppercase;
     font-size: 14px;
     line-height: 16px;
@@ -485,15 +494,15 @@
       color: #000;
     }
   }
-  &__social-list {
+  .contacts__social-list {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-  &__social-item {
+  .contacts__social-item {
     margin: 10px 0;
   }
-  &__social-link {
+  .contacts__social-link {
     opacity: 0.5;
     transition: all 0.3s;
     &:hover {
@@ -503,7 +512,7 @@
   .footer {
     display: flex;
     justify-content: flex-end;
-    &__copy {
+    .footer__copy {
       font-size: 13px;
       line-height: 20px;
       color: #ffffff;
@@ -512,4 +521,4 @@
   }
 }
 
-@import "media";
+@import 'media';

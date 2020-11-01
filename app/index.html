@@ -14,35 +14,43 @@
 
   <header class="header">
     <div class="container">
-      <div class="header__inner">
-        <a class="logo" href="#">
-          <picture class="logo__img">
-            <source src="images/logo-mobile.png" media="(max-width: 600px)">
-            <img src="images/logo.png" alt="logo">
-          </picture>
-        </a>
+      <div id="header__nav" class="header__inner">
+        <div data-menuanchor="top">
+          <a class="logo" href="#top">
+            <picture class="logo__img">
+              <source srcset="./images/logo-mobile.png" media="(max-width: 1100px)">
+              <img src="./images/logo.png" alt="logo">
+            </picture>
+          </a>
+        </div>
         <nav class="menu">
+          <button class="menu__btn">
+            <span class="menu__line"></span>
+          </button>
           <ul class="menu__list">
-            <li class="menu__list-item">
-              <a class="menu__list-link" href="#">О ДРОНЕ</a>
+            <li class="menu__list-item" data-menuanchor="products">
+              <a class="menu__list-link" href="#products">О ДРОНЕ</a>
             </li>
-            <li class="menu__list-item">
-              <a class="menu__list-link" href="#">ПРЕИМУЩЕСТВА</a>
+            <li class="menu__list-item" data-menuanchor="benefits">
+              <a class="menu__list-link" href="#benefits">ПРЕИМУЩЕСТВА</a>
             </li>
-            <li class="menu__list-item">
-              <a class="menu__list-link" href="#">ХАРАКТЕРИСТИКИ</a>
+            <li class="menu__list-item" data-menuanchor="specification">
+              <a class="menu__list-link" href="#specification">ХАРАКТЕРИСТИКИ</a>
             </li>
-            <li class="menu__list-item">
-              <a class="menu__list-link" href="#">ВОПРОСЫ</a>
+            <li class="menu__list-item" data-menuanchor="questions">
+              <a class="menu__list-link" href="#questions">ВОПРОСЫ</a>
             </li>
-            <li class="menu__list-item">
-              <a class="menu__list-link" href="#">КОНТАКТЫ</a>
+            <li class="menu__list-item" data-menuanchor="contacts">
+              <a class="menu__list-link" href="#contacts">КОНТАКТЫ</a>
+            </li>
+            <li class="menu__list-phone">
+              <a class="header__phone" href="tel:80505676767">8 (050) 567 67 67</a>
             </li>
           </ul>
         </nav>
         <div class="header__info">
           <button class="header__btn">купить</button>
-          <a class="header__phone" href="tel:80505676767">8 (050) 567 67 67</a>
+          <a class="header__phone--m" href="tel:80505676767">8 (050) 567 67 67</a>
         </div>
         <!-- /.header__info -->
       </div>
@@ -52,7 +60,7 @@
   <!-- header -->
 
   <main id="fullpage">
-    <section class="page-section top">
+    <section id="top" class="page-section top">
       <div class="page-section__wrapper top__wrapper">
         <div class="container">
           <div class="top__inner">
@@ -62,17 +70,17 @@
             </p>
             <ul class="top__social-list">
               <li class="top__social-item">
-                <a class="top__social-link" href="#">
+                <a class="top__social-link" href="#!">
                   <img src="images/facebook.svg" alt="facebook logo">
                 </a>
               </li>
               <li class="top__social-item">
-                <a class="top__social-link" href="#">
+                <a class="top__social-link" href="#!">
                   <img src="images/youtube.svg" alt="youtube logo">
                 </a>
               </li>
               <li class="top__social-item">
-                <a class="top__social-link" href="#">
+                <a class="top__social-link" href="#!">
                   <img src="images/instagram.svg" alt="instagram logo">
                 </a>
               </li>
@@ -156,7 +164,7 @@
     <section id="benefits" class="page-section benefits">
       <div class="page-section__wrapper">
         <div class="container">
-          <h3 class="title">Преимущества</h3>
+          <h3 class="title benefits__title">Преимущества</h3>
           <div class="benefits__items">
 
             <div class="benefits__item">
@@ -182,11 +190,9 @@
 
             <div class="benefits__item">
               <div class="benefits__num">2</div>
-              <!-- /.benefits__num -->
               <div class="benefits__img">
                 <img src="images/benefits-2.jpg" alt="">
               </div>
-              <!-- /.benefits__img -->
               <div class="benefits__info">
                 <h4 class="benefits__info-title">Active Track 2.0</h4>
                 <p class="benefits__info-text">
@@ -195,17 +201,14 @@
                   умнее.
                 </p>
               </div>
-              <!-- /.benefits__info -->
             </div>
             <!-- /.benefits__item -->
 
             <div class="benefits__item">
               <div class="benefits__num">3</div>
-              <!-- /.benefits__num -->
               <div class="benefits__img">
                 <img src="images/benefits-3.jpg" alt="">
               </div>
-              <!-- /.benefits__img -->
               <div class="benefits__info">
                 <h4 class="benefits__info-title">
                   Панорамная
@@ -218,17 +221,14 @@
                   горизонтальная, вертикальная
                 </p>
               </div>
-              <!-- /.benefits__info -->
             </div>
             <!-- /.benefits__item -->
 
             <div class="benefits__item">
               <div class="benefits__num">4</div>
-              <!-- /.benefits__num -->
               <div class="benefits__img">
                 <img src="images/benefits-4.jpg" alt="">
               </div>
-              <!-- /.benefits__img -->
               <div class="benefits__info">
                 <h4 class="benefits__info-title">
                   Крутая
@@ -241,7 +241,6 @@
                   4К съёмка
                 </p>
               </div>
-              <!-- /.benefits__info -->
             </div>
             <!-- /.benefits__item -->
 
@@ -324,6 +323,7 @@
     <section id="questions" class="page-section questions">
       <div class="page-section__wrapper">
         <div class="container">
+
           <h3 class="title">Остались вопросы?</h3>
           <div class="questions__items">
             <div class="questions__item">
@@ -431,17 +431,17 @@
             <!-- contacts__form -->
             <ul class="contacts__social-list">
               <li class="contacts__social-item">
-                <a class="contacts__social-link" href="#">
+                <a class="contacts__social-link" href="#!">
                   <img src="images/facebook.svg" alt="facebook logo">
                 </a>
               </li>
               <li class="contacts__social-item">
-                <a class="contacts__social-link" href="#">
+                <a class="contacts__social-link" href="#!">
                   <img src="images/youtube.svg" alt="youtube logo">
                 </a>
               </li>
               <li class="contacts__social-item">
-                <a class="contacts__social-link" href="#">
+                <a class="contacts__social-link" href="#!">
                   <img src="images/instagram.svg" alt="instagram logo">
                 </a>
               </li>
