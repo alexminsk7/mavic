@@ -1,29 +1,29 @@
 html {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+	text-decoration: none;
+	color: inherit;
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+	max-width: 100%;
+	height: auto;
 }
 
 ul,
 li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 h1,
@@ -32,68 +32,68 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0;
-  font-size: inherit;
+	margin: 0;
+	font-size: inherit;
 }
 
 body {
-  min-width: 320px;
-  overflow-x: hidden;
-  position: relative;
-  color: #fff;
-  font-size: 17px;
-  line-height: 26px;
-  @extend %ubuntu-light;
+	min-width: 320px;
+	overflow-x: hidden;
+	position: relative;
+	color: #fff;
+	font-size: 17px;
+	line-height: 26px;
+	@extend %ubuntu-light;
 }
 
 .container {
-  max-width: 1270px;
-  padding: 0 15px;
-  margin: 0 auto;
+	max-width: 1270px;
+	padding: 0 15px;
+	margin: 0 auto;
 }
 
 .page-section {
-  position: relative;
-  background-image: url(../images/page-bg.jpg);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
-  &::before {
-    content: '';
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: absolute;
-    background: linear-gradient(
-      119.35deg,
-      rgba(23, 26, 28, 0.72) 0%,
-      #5e5e57 100%
-    );
-    opacity: 0.15;
-  }
-  &__wrapper {
-    position: relative;
-    z-index: 1;
-    min-height: 100vh;
-    padding: 74px 0 50px;
-  }
+	position: relative;
+	background-image: url(../images/page-bg.jpg);
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: cover;
+	&::before {
+		content: '';
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		position: absolute;
+		background: linear-gradient(
+			119.35deg,
+			rgba(23, 26, 28, 0.72) 0%,
+			#5e5e57 100%
+		);
+		opacity: 0.15;
+	}
+	&__wrapper {
+		position: relative;
+		z-index: 1;
+		min-height: 100vh;
+		padding: 74px 0 50px;
+	}
 }
 
 .title {
-  @extend %sf-regular;
-  font-size: 44px;
-  line-height: 53px;
-  padding-left: 25px;
-  padding-top: 200px;
-  margin-bottom: 55px;
+	@extend %sf-regular;
+	font-size: 44px;
+	line-height: 53px;
+	padding-left: 25px;
+	padding-top: 200px;
+	margin-bottom: 55px;
 }
 
 .scroll__btn {
-  padding: 13px 0 30px;
-  position: absolute;
-  text-align: center;
-  left: 0;
-  right: 0;
-  bottom: 0;
+	padding: 13px 0 30px;
+	position: absolute;
+	text-align: center;
+	left: 0;
+	right: 0;
+	bottom: 0;
 }
